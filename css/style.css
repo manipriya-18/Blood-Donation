@@ -8,13 +8,13 @@ body {
 
 /* ================= HOME PAGE ================= */
 body.home-page {
-    background:rgb(6, 6, 8);
+    background:rgb(25, 25, 79);
 }
 
 /* HEADER & FOOTER */
 .header,
 .footer {
-    background: #3feeda;
+    background: #f2f8f7;
     color: #111;
     text-align: center;
     padding: 35px;
@@ -32,7 +32,7 @@ body.home-page {
 
 .home p {
     font-size: 20px;
-    color: #0c0909;
+    color: #f3eceb;
     line-height: 1.6;
     max-width: 600px;
     margin: 20px auto;
