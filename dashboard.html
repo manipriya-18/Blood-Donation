@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- TOP RIGHT NAV BOXES -->
+<div class="top-nav">
+    <a href="index.html" class="nav-box">🏠 Home</a>
+    <a href="register.html" class="nav-box">📝 Register</a>
+</div>
+
+<div class="container">
+    <h2>Student Dashboard</h2>
+
+    <!-- SEARCH BAR -->
+    <div class="search-bar">
+        <select id="searchBranch">
+            <option value="">All Branches</option>
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="ECE">ECE</option>
+            <option value="MECH">MECH</option>
+        </select>
+
+        <select id="searchBlood">
+            <option value="">All Blood Groups</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+        </select>
+
+        <select id="searchGender">
+            <option value="">All Genders</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <button onclick="searchStudent()">Search</button>
+        <button onclick="resetSearch()">Reset</button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-wrapper">
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Phone</th>
+                    <th>Branch</th>
+                    <th>Blood</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- PAGINATION -->
+    <div id="pagination" class="pagination"></div>
+    <p id="recordInfo"></p>
+</div>
+
+<script src="dist/script.js"></script>
+</body>
+</html>

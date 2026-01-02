@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- TOP RIGHT NAV BOXES -->
+<div class="top-nav">
+    <a href="index.html" class="nav-box">🏠 Home</a>
+    <a href="dashboard.html" class="nav-box">📊 Dashboard</a>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast"></div>
+
+<div class="container small">
+    <h2>Student Registration</h2>
+
+    <!-- ❗ novalidate important -->
+<form id="registrationForm" class="grid-form" novalidate>
+
+        <!-- Student ID -->
+        <div class="form-group">
+            <label>Student ID</label>
+            <input type="text" id="id">
+            <small class="error" id="idError"></small>
+        </div>
+
+        <!-- Name -->
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="name">
+            <small class="error" id="nameError"></small>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email">
+            <small class="error" id="emailError"></small>
+        </div>
+
+        <!-- Age -->
+        <div class="form-group">
+            <label>Age</label>
+            <input type="number" id="age">
+            <small class="error" id="ageError"></small>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+            <label>Gender</label>
+            <select id="gender">
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+            <small class="error" id="genderError"></small>
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group">
+            <label>Phone Number</label>
+            <div class="phone-wrapper">
+                <select id="countryCode">
+                    <option value="+91">+91 (India)</option>
+                    <option value="+1">+1 (USA)</option>
+                    <option value="+44">+44 (UK)</option>
+                </select>
+                <input type="text" id="phone" placeholder="Enter phone number">
+            </div>
+            <small class="error" id="phoneError"></small>
+        </div>
+
+        <!-- Course -->
+<div class="form-group">
+    <label>Course</label>
+    <select id="course">
+        <option value="">Select Course</option>
+        <option value="BTech">B.Tech</option>
+        <option value="Diploma">Diploma</option>
+        <option value="MTech">M.Tech</option>
+    </select>
+    <small class="error" id="courseError"></small>
+</div>
+
+<!-- Branch -->
+<div class="form-group">
+    <label>Branch</label>
+    <select id="branch">
+        <option value="">Select Branch</option>
+    </select>
+    <small class="error" id="branchError"></small>
+</div>
+
+
+        <!-- Blood -->
+        <div class="form-group">
+            <label>Blood Group</label>
+            <select id="blood">
+                <option value="">Select</option>
+                <option>A+</option><option>A-</option>
+                <option>B+</option><option>B-</option>
+                <option>O+</option><option>O-</option>
+                <option>AB+</option><option>AB-</option>
+            </select>
+            <small class="error" id="bloodError"></small>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="register-btn">
+            Register
+        </button>
+
+    </form>
+</div>
+
+<!-- JS -->
+<script src="dist/script.js"></script>
+</body>
+</html>

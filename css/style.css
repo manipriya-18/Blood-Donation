@@ -1,0 +1,306 @@
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    animation: fade 1s;
+}
+
+/* ================= HOME PAGE ================= */
+body.home-page {
+    background:rgb(6, 6, 8);
+}
+
+/* HEADER & FOOTER */
+.header,
+.footer {
+    background: #3feeda;
+    color: #111;
+    text-align: center;
+    padding: 35px;
+}
+
+.footer {
+    padding: 6px;
+}
+
+/* HOME CONTENT */
+.home {
+    text-align: center;
+    padding: 130px 20px;
+}
+
+.home p {
+    font-size: 20px;
+    color: #0c0909;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 20px auto;
+    font-weight: 500;
+}
+
+.blood-icon {
+    width: 400px;
+    animation: pulse 2s infinite;
+}
+
+.home-buttons .btn {
+    margin: 30px;
+    padding: 12px 25px;
+    background: #b11226;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* ================= TOP NAV ================= */
+.top-nav {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    gap: 12px;
+    z-index: 1000;
+}
+
+.nav-box {
+    padding: 10px 16px;
+    background: white;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.nav-box:hover {
+    background: #185a9d;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    background: white;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    animation: slide 0.7s;
+}
+
+/* Register page size */
+.container.small {
+    max-width: 650px;
+    margin: 90px auto;
+}
+
+/* Dashboard slightly left */
+.container.dashboard {
+    margin-left: 100px;
+    margin-right: auto;
+}
+
+/* ================= FORM ================= */
+.grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.register-btn {
+    grid-column: span 2;
+    padding: 12px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.register-btn:hover {
+    transform: scale(1.05);
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+/* ================= DASHBOARD ================= */
+.search-bar {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar select,
+.search-bar button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    background: #185a9d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background: #2aecc5;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #185a9d;
+    color: white;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+/* ================= TOAST POPUP ================= */
+.toast {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: all 0.6s ease;
+    z-index: 9999;
+}
+
+.toast.show {
+    top: 25px;
+    opacity: 1;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fade {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@keyframes slide {
+    from { transform: translateY(30px) }
+    to { transform: translateY(0) }
+}
+
+@keyframes pulse {
+    0%,100% { transform: scale(1) }
+    50% { transform: scale(1.1) }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+    .grid-form {
+        grid-template-columns: 1fr;
+    }
+
+    .container.dashboard {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.phone-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.phone-wrapper select {
+    width: 35%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.phone-wrapper input {
+    width: 65%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.pagination {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.pagination button {
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
+#recordInfo {
+    text-align: center;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.pagination button {
+    margin: 0 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+.pagination button.active {
+    background-color: #4caf50;
+    color: white;
+}
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
